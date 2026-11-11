@@ -1,0 +1,21 @@
+{
+  "name": "imagegen-mai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Microsoft Foundry MAI-Image series image generation skill CLI helpers.",
+  "bin": {
+    "image_gen": "./scripts/image_gen.js",
+    "remove_chroma_key": "./scripts/remove_chroma_key.js"
+  },
+  "scripts": {
+    "check": "node --check scripts/image_gen.js && node --check scripts/remove_chroma_key.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
