@@ -174,7 +174,7 @@ const rejections = [
   [["generate", "--prompt", "x", "--background", "transparent"], /unrecognized argument/],
   [["edit", "--prompt", "x", "--image", "missing.png"], /Image file not found/],
   [["edit", "--prompt", "x", "--image", "a.png", "--size", "1024x1024"], /generations API only/],
-  [["edit", "--prompt", "x", "--image", "a.png", "--model", "MAI-Image-2"], /text-to-image generation only/],
+  [["edit", "--prompt", "x", "--image", "a.png", "--model", "MAI-Image-2"], /documented for text-to-image generation only/],
 ];
 
 for (const [args, pattern] of rejections) {

@@ -11,12 +11,12 @@ This file summarizes the Microsoft Foundry MAI image API that `scripts/image_gen
 | `MAI-Image-2.5-Pro` | `2026-06-19` | Yes | Yes | 1,048,576 | No |
 | `MAI-Image-2.5-Flash` | `2026-06-02` | Yes | Yes | 1,048,576 | No |
 | `MAI-Image-2.5` | `2026-06-02` | Yes | Yes | 1,048,576 | No |
-| `MAI-Image-2`, `MAI-Image-2e` (earlier) | n/a | Yes | No | 1,048,576 | No |
+| `MAI-Image-2`, `MAI-Image-2e` (earlier) | n/a | Yes | Not documented | 1,048,576 | No |
 
 - All models deploy as Global Standard.
 - `MAI-Image-2.6-Flash` has the same generation and editing capabilities as `MAI-Image-2.6`. It is faster and cheaper.
 - Status: the Learn page (2026-09-21) lists the MAI-Image-2.6 models as Preview. The Microsoft Foundry blog announced general availability of `MAI-Image-2.6` and `MAI-Image-2.6-Flash` on 2026-10-27. Check the Foundry portal for the current status.
-- `MAI-Image-2` and `MAI-Image-2e` are no longer listed on the current Learn page. The CLI keeps them for existing deployments as text-to-image only models.
+- `MAI-Image-2` and `MAI-Image-2e` are no longer listed on the current Learn page. Their limits come from the Microsoft Foundry [forgebook notebook](https://microsoft-foundry.github.io/forgebook/notebook/mai-image-2), which documents only the generations API (each side at least 768, total pixels at most 1,048,576). Edits are not documented for them, so the CLI blocks `edit` on these models.
 
 ## Endpoints
 

@@ -24,7 +24,7 @@
 | `MAI-Image-2.5-Pro` | 支援 | 支援 | 1,048,576（約 1024×1024） | 不支援 |
 | `MAI-Image-2.5-Flash` | 支援 | 支援 | 1,048,576 | 不支援 |
 | `MAI-Image-2.5` | 支援 | 支援 | 1,048,576 | 不支援 |
-| `MAI-Image-2`、`MAI-Image-2e`（舊款） | 支援 | 不支援 | 1,048,576 | 不支援 |
+| `MAI-Image-2`、`MAI-Image-2e`（舊款） | 支援 | 未記載（CLI 阻擋） | 1,048,576 | 不支援 |
 
 - 寬與高各自至少 768px；官方未限制長寬比，只要總畫素數不超過上限即可，例如 2.6 系列可用 `2048x1152`。
 - MAI-Image-2.6 系列的狀態：Microsoft Learn 頁面（2026-09-21）標示為 Preview，Microsoft Foundry blog 則在 2026-10-27 宣布 GA，實際狀態請以 Foundry portal 為準。

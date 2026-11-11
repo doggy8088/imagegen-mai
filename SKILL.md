@@ -84,7 +84,7 @@ Edit semantics:
 - If the user provides attached images or references from the conversation, save them locally first if the environment supports that; otherwise ask the user for local file paths.
 - Image order is meaningful, so label each image by index and role in the prompt.
 - For edits, preserve invariants aggressively and save non-destructively by default.
-- `MAI-Image-2` and `MAI-Image-2e` do not support edits.
+- Edits are not documented for `MAI-Image-2` and `MAI-Image-2e`, and the CLI blocks them; use a MAI-Image-2.5 or MAI-Image-2.6 deployment for edits.
 
 Execution strategy:
 

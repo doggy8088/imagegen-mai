@@ -25,7 +25,9 @@ const MAI_2_5_MAX_PIXELS = 1_048_576; // 1024x1024 equivalent
 // Known MAI-Image models. Keys are lowercase base model names.
 // - editsSupported: whether the /images/edits API is available for the model.
 // - extras: whether auto_aspect_ratio and web_grounding are accepted (MAI-Image-2.6 family only).
-// MAI-Image-2 and MAI-Image-2e are the earlier text-to-image-only models; they share the 2.5 pixel cap.
+// MAI-Image-2 and MAI-Image-2e are earlier models no longer listed on the Learn page. The Foundry forgebook
+// notebook (microsoft-foundry.github.io/forgebook/notebook/mai-image-2) documents generations only, with the
+// same 768px minimum and 1,048,576 pixel cap, so edits stay disabled for them.
 const MAI_MODELS = new Map([
   ["mai-image-2.6-flash", { name: "MAI-Image-2.6-Flash", maxPixels: MAI_2_6_MAX_PIXELS, editsSupported: true, extras: true }],
   ["mai-image-2.6", { name: "MAI-Image-2.6", maxPixels: MAI_2_6_MAX_PIXELS, editsSupported: true, extras: true }],
@@ -461,7 +463,7 @@ async function generate(args) {
 async function edit(args) {
   const prompt = augmentPromptFields(args.augment, readPrompt(args.prompt, args.promptFile), fieldsFromArgs(args));
   const spec = resolveModel(args.model, args.baseModel);
-  if (!spec.editsSupported) die(`${spec.name} supports text-to-image generation only; image edits are not available.`);
+  if (!spec.editsSupported) die(`${spec.name} is documented for text-to-image generation only; image edits are not documented for it. Use a MAI-Image-2.5 or MAI-Image-2.6 deployment for edits.`);
   if (args.width !== undefined || args.height !== undefined || args.size !== undefined) {
     die("width/height/size apply to the image generations API only; the MAI image edits API does not accept them.");
   }

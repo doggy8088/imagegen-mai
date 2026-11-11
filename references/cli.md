@@ -104,7 +104,7 @@ The CLI validates each request against the base model's rules:
 | --- | --- | --- | --- |
 | `MAI-Image-2.6-Flash`, `MAI-Image-2.6` | Yes | 2,359,296 | Yes |
 | `MAI-Image-2.5-Pro`, `MAI-Image-2.5-Flash`, `MAI-Image-2.5` | Yes | 1,048,576 | No |
-| `MAI-Image-2`, `MAI-Image-2e` | No | 1,048,576 | No |
+| `MAI-Image-2`, `MAI-Image-2e` | Not documented (CLI blocks) | 1,048,576 | No |
 
 In Microsoft Foundry, `--model` is the deployment name, which does not have to match the base model name. The CLI matches the deployment name against the table above without regard to case. If the deployment has a custom name (for example `prod-flash`), pass `--base-model MAI-Image-2.6-Flash` or set `IMAGEGEN_MAI_BASE_MODEL`. Otherwise the CLI refuses the request.
 
