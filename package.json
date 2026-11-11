@@ -10,7 +10,7 @@
   },
   "scripts": {
     "check": "node --check scripts/image_gen.js && node --check scripts/remove_chroma_key.js",
-    "test": "node --test test/"
+    "test": "node --test test/*.test.js"
   },
   "dependencies": {
     "sharp": "^0.34.5"
